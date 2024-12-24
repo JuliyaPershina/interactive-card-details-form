@@ -1,0 +1,38 @@
+html {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  max-width: 1440px;
+  height: 100vh;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+article {
+  background-color: burlywood;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  min-width: 1112px;
+  width: 100%;
+  min-height: 527px;
+  /* flex-shrink: 1; */
+  margin-inline: 10px;
+  .cards-foto {
+    width: 541px;
+  }
+  .form {
+    width: 507px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    form {
+        width: 381px;
+        height: 352px;
+    }
+  }
+}
