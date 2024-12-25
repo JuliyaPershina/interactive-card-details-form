@@ -1,3 +1,18 @@
+:root {
+  --white: #ffffff;
+  --light_grayish_violet: #dedddf;
+  --dark_grayish_violet: #8e8593;
+  --very_dark_violet: #21092f;
+}
+@font-face {
+  font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+  font-family: 'Space Grotesk';
+  font-style: normal;
+  font-weight: 500;
+  src: url('./fonts/space-grotesk-v16-latin-500.woff2') format('woff2'),
+    /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+      url('./fonts/space-grotesk-v16-latin-500.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5+, IE 9+, Safari 3.1+, iOS 4.2+, Android Browser 2.2+ */
+}
 html {
   display: flex;
   justify-content: center;
@@ -5,34 +20,97 @@ html {
 }
 
 body {
+  font-family: 'Space Grotesk', sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
   max-width: 1440px;
   height: 100vh;
-  background-color: aqua;
+  background-color: var(--white);
+  background-image: url(./images/bg-main-desktop.png);
+  background-repeat: no-repeat;
+  background-size: 34% 100%;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 article {
-  background-color: burlywood;
   display: flex;
   flex-wrap: wrap;
+  gap: 64px;
   justify-content: space-between;
-  min-width: 1112px;
-  width: 100%;
+  max-width: 1112px;
   min-height: 527px;
-  /* flex-shrink: 1; */
   margin-inline: 10px;
   .cards-foto {
     width: 541px;
-  }
-  .form {
-    width: 507px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    form {
-        width: 381px;
-        height: 352px;
+    position: relative;
+    img {
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+    img + img {
+      display: inline-block;
+      position: absolute;
+      bottom: 0;
+      right: 0;
     }
   }
+}
+
+.form {
+  width: 507px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  form {
+    width: 381px;
+    height: 352px;
+    display: flex;
+    flex-direction: column;
+    div {
+      margin-block-end: 9px;
+    }
+    div + div {
+      margin-block-end: 40px;
+    }
+  }
+}
+label {
+  color: var(--very_dark_violet);
+  font-size: 12px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-block-end: 9px;
+}
+::-webkit-input-placeholder {
+  color: var(--very_dark_violet);
+  font-size: 18px;
+  opacity: 0.25;
+}
+input[name='name'],
+input[name='cardNunber'] {
+  margin-block-end: 26px;
+}
+
+input[name='month'],
+input[name='year'] {
+  width: 80px;
+  height: 45px;
+  margin-inline-end: 7px;
+}
+input[name='cvc'] {
+  width: 191px;
+  height: 45px;
+  margin-inline-start: 7px;
+}
+button {
+  width: 381px;
+  height: 53px;
+  border-radius: 8px;
+  background: var(--very_dark_violet);
+  color: var(--white, #fff);
+  font-size: 18px;
 }

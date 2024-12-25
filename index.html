@@ -1,44 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-<link rel="stylesheet" href="./reset.css">
-<link rel="stylesheet" href="./style.css">
-  
-  <title>Juliia Pershina | Interactive card details form</title>
-  
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+    <link rel="stylesheet" href="./reset.css" />
+    <link rel="stylesheet" href="./style.css" />
 
-  <article>
-    <div class="cards-foto"></div>
-  
-    <div class="form">
-      <form>
-        Cardholder Name
-        e.g. Jane Appleseed
-      
-        Card Number
-        e.g. 1234 5678 9123 0000
-      
-        Exp. Date (MM/YY)
-        MM
-        YY
-      
-        CVC
-        e.g. 123
-      
-        Confirm
-      </form>
-    </div>
-  </article>
+    <title>Juliia Pershina | Interactive card details form</title>
+  </head>
+  <body>
+    <article>
+      <div class="cards-foto">
+        <img src="./images/bg-card-front.png" width="447px" height="245px" alt="" />
+        <img src="./images/bg-card-back.png" width="447px" height="245px" alt=""  />
 
-  <!-- Completed state start -->
+      </div>
 
-  <!-- Thank you!
+      <div class="form">
+        <form>
+          <label for="name"> Cardholder Name </label>
+          <input type="text" name="name" placeholder="e.g. Jane Appleseed" />
+          <label for="cardNunber"> Card Number </label>
+          <input
+            type="number"
+            name="cardNunber"
+            id=""
+            placeholder="e.g. 1234 5678 9123 0000"
+          />
+          
+            <div>
+              <label for="month"> Exp. Date (MM/YY) </label>
+              <label for="cvc">
+                CVC
+              </label>
+            </div>
+            <div>
+              <input type="number" name="month" id="" placeholder="MM" />
+              <input type="number" name="year" id="" placeholder="YY" />
+              <input type="number" name="cvc" id="" placeholder="e.g. 123" />
+            </div>
+          
+          <button type="button">Confirm</button>
+        </form>
+      </div>
+    </article>
+
+    <!-- Completed state start -->
+
+    <!-- Thank you!
   We've added your card details
   Continue -->
-  
-</body>
+  </body>
 </html>
