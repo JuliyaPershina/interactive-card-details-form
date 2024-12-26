@@ -54,6 +54,8 @@ article {
     img + img {
       display: inline-block;
       position: absolute;
+      top: auto;
+      left: auto;
       bottom: 0;
       right: 0;
     }
@@ -78,6 +80,9 @@ article {
     }
   }
 }
+.date {
+  margin-inline-end: 50px;
+}
 label {
   color: var(--very_dark_violet);
   font-size: 12px;
@@ -85,14 +90,37 @@ label {
   text-transform: uppercase;
   margin-block-end: 9px;
 }
+
+input {
+  border-radius: 8px;
+  border: 1px solid var(--light_grayish_violet, #dfdee0);
+  background: var(--white, #fff);
+  padding-inline: 16px;
+  font-family: inherit;
+}
+
 ::-webkit-input-placeholder {
   color: var(--very_dark_violet);
   font-size: 18px;
   opacity: 0.25;
+  font-family: inherit;
+}
+::-webkit-inner-spin-button {
+  appearance: none;
+  -ms-progress-appearance: none;
+}
+
+input:focus,
+input:focus,
+input:hover {
+  /* cursor: pointer; */
+  outline: 1px solid #6348fe;
 }
 input[name='name'],
-input[name='cardNunber'] {
+input[name='cardNumber'] {
   margin-block-end: 26px;
+  width: 381px;
+  height: 45px;
 }
 
 input[name='month'],
@@ -113,4 +141,9 @@ button {
   background: var(--very_dark_violet);
   color: var(--white, #fff);
   font-size: 18px;
+  transition: all 1s;
+  transform-origin: center center;
+}
+button:hover {
+  transform: scale(1.05);
 }

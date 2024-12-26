@@ -12,35 +12,68 @@
   <body>
     <article>
       <div class="cards-foto">
-        <img src="./images/bg-card-front.png" width="447px" height="245px" alt="" />
-        <img src="./images/bg-card-back.png" width="447px" height="245px" alt=""  />
-
+        <img
+          src="./images/bg-card-front.png"
+          width="447px"
+          height="245px"
+          alt="The front end of the plastik card"
+        />
+        <img
+          src="./images/bg-card-back.png"
+          width="447px"
+          height="245px"
+          alt="The back end of the plastik card"
+        />
       </div>
 
       <div class="form">
         <form>
           <label for="name"> Cardholder Name </label>
-          <input type="text" name="name" placeholder="e.g. Jane Appleseed" />
-          <label for="cardNunber"> Card Number </label>
           <input
-            type="number"
-            name="cardNunber"
+            type="text"
+            autocapitalize
+            name="name"
+            placeholder="e.g. Jane Appleseed"
+          />
+          <label for="cardNumber"> Card Number </label>
+          <input
+            type="text"
+            name="cardNumber"
             id=""
             placeholder="e.g. 1234 5678 9123 0000"
           />
-          
-            <div>
-              <label for="month"> Exp. Date (MM/YY) </label>
-              <label for="cvc">
-                CVC
-              </label>
-            </div>
-            <div>
-              <input type="number" name="month" id="" placeholder="MM" />
-              <input type="number" name="year" id="" placeholder="YY" />
-              <input type="number" name="cvc" id="" placeholder="e.g. 123" />
-            </div>
-          
+
+          <div>
+            <label class="date" for="month"> Exp. Date (MM/YY) </label>
+            <label for="cvc"> CVC </label>
+          </div>
+          <div>
+            <input
+              type="number"
+              name="month"
+              id=""
+              placeholder="MM"
+              min="1"
+              max="12"
+            />
+            <input
+              type="number"
+              name="year"
+              id=""
+              placeholder="YY"
+              min="25"
+              max="35"
+            />
+            <input
+              type="number"
+              name="cvc"
+              id=""
+              placeholder="e.g. 123"
+              min="1"
+              max="4"
+            />
+          </div>
+
           <button type="button">Confirm</button>
         </form>
       </div>
