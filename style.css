@@ -96,7 +96,7 @@ input {
   border-radius: 8px;
   border: 1px solid var(--light_grayish_violet, #dfdee0);
   background: var(--white, #fff);
-  padding-inline: 16px;
+  padding-inline: 10px;
   font-family: inherit;
 }
 
@@ -129,6 +129,10 @@ input[name='year'] {
   width: 80px;
   height: 45px;
   margin-inline-end: 7px;
+  padding-inline-end: 5px;
+  picker::marker {
+    margin-inline-end: 1px;
+  }
 }
 input[name='cvc'] {
   width: 191px;
