@@ -62,6 +62,7 @@
               max="12"
               list="month"
               required
+              title="Введіть кінцевий місяць дії картки"
             />
             <datalist id="month">
               <option value="1"></option>
@@ -78,15 +79,15 @@
               <option value="12"></option>
             </datalist>
             <input
-              type="text"
+              type="tel"
+              inputmode="numeric"
+              pattern="[0-9]{3}"
               name="year"
               id="year"
               placeholder="YY"
-              min="25"
-              max="35"
               maxlength="2"
               required
-              
+              title="Введіть кінцевий рік дії картки"
             />
             <input
               type="number"
@@ -97,6 +98,7 @@
               max="999"
               required
               oninput="if(this.value.length > 3) this.value = this.value.slice(0,3)"
+              title="Введіть номер cvc"
             />
           </div>
 
