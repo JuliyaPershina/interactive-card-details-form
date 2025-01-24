@@ -90,15 +90,13 @@
               title="Введіть кінцевий рік дії картки"
             />
             <input
-              type="number"
+              type="text"
               name="cvc"
               id="cvc"
               placeholder="e.g. 123"
-              min="0"
-              max="999"
               required
-              oninput="if(this.value.length > 3) this.value = this.value.slice(0,3)"
-              title="Введіть номер cvc"
+              oninput="this.value = this.value.replace(/\D/g,'')"
+              title="Введіть три цифри cvc"
             />
           </div>
 
